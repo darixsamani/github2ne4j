@@ -1,7 +1,7 @@
 name: 'From GitHub Issue, Pull Request etc.. To NEJ'
 description: 'Collecting data has never been easier! This simple action can gather all sorts of valuable information like issues and pull requests, and then seamlessly transmit it all to a Neo4j database. Say goodbye to tedious data collection and hello to effortless organization!'
 branding:
-  icon: 'shield'  
+  icon: 'upload'
   color: 'blue'
 
 env:
@@ -26,4 +26,4 @@ inputs:
 
 runs:
   using: 'pythoon3.8'
-  main: 'main.py'
+  main: './src/main.py'
