@@ -1,7 +1,7 @@
 from typing import ClassVar
 import pandas as pd
 from neontology import BaseNode, BaseRelationship, init_neontology, auto_constrain
-
+import os
 
 class Repository(BaseNode):
 
@@ -42,3 +42,11 @@ class HavePullRequest(BaseRelationship):
     
     source: Repository
     target: PullRequest
+
+
+def init_database():
+    init_neontology(
+        neo4j_uri=os.environ.get("NEO4J_URI"),
+        neo4j_username=os.environ.get("NEO4J_USERNAME"),
+        neo4j_password=os.environ.get("NEO4J_PASSWORD")
+    )
