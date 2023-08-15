@@ -1,0 +1,29 @@
+name: 'From GitHub Issue, Pull Request etc.. To NEJ'
+description: 'Collecting data has never been easier! This simple action can gather all sorts of valuable information like issues and pull requests, and then seamlessly transmit it all to a Neo4j database. Say goodbye to tedious data collection and hello to effortless organization!'
+branding:
+  icon: 'shield'  
+  color: 'blue'
+
+env:
+  NEO4J_URI: Neo4j URI
+  neo4j_username: Neo4j username
+  neo4j_password: neo4j password
+
+inputs:
+  NEO4J_URI
+    description: "URI de neo4j"
+    required: true
+    default: 'bolt:://localhost:7474'
+  neo4j_username
+    description: username neo4j instance 
+    required: true
+    default: 'neo4j'
+  neo4j_password
+    description: password neo4 instance
+    required: true
+    default: 'neo4j'
+
+
+runs:
+  using: 'pythoon3.8'
+  main: 'main.py'
