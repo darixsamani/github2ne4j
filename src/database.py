@@ -6,10 +6,13 @@ import os
 class Repository(BaseNode):
 
     __primarylabel__: ClassVar[str] = "Repository"
-    __primaryproperty__: ClassVar[str] = "url"
+    __primaryproperty__: ClassVar[str] = "repository"
 
-    url : str
-
+    repository : str
+    repository_id: int
+    repository_owner: str
+    repository_owner_id: str
+    repositoryUrl: str
 
 
 

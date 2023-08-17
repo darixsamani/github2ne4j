@@ -1,4 +1,5 @@
 name: 'From GitHub Issue, Pull Request etc.. To NEJ'
+author: Darix SAMANI
 description: 'Collecting data has never been easier! This simple action can gather all sorts of valuable information like issues and pull requests, and then seamlessly transmit it all to a Neo4j database. Say goodbye to tedious data collection and hello to effortless organization!'
 branding:
   icon: 'upload'
@@ -22,6 +23,12 @@ inputs:
     description: password neo4 instance
     required: true
     default: 'neo4j'
+  GITHUB_CONTEXT
+    desctiption : "content githud"
+    required: true
+
+  repository:
+    description : "github repository"
 
 
 runs:
