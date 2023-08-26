@@ -3,9 +3,15 @@ import os
 import logging
 
 
+
+logger = logging.getLogger(__name__)
+
+
+
+
 def main():
     github_content = os.environ.get("GITHUB_CONTEXT")
-    logging.info(github_content)
+    logger.info(github_content)
     print(f"github context {github_content}")
 
     
