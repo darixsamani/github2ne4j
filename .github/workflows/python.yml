@@ -26,5 +26,5 @@ jobs:
         run: |
           ls
           pip install flake8
-          flake8 ./scr/main.py
+          flake8 ./src/main.py
 
